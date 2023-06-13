@@ -1,3 +1,58 @@
+
+window.performance &&
+    window.performance.mark &&
+    window.performance.mark("shopify.content_for_header.start");
+
+var Shopify = Shopify || {};
+Shopify.shop = "pangrampangram.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = { active: "USD", rate: "1.0" };
+Shopify.country = "US";
+Shopify.theme = {
+    name: "PPF2021",
+    id: 83681083446,
+    theme_store_id: null,
+    role: "main",
+};
+Shopify.theme.handle = "null";
+Shopify.theme.style = { id: null, handle: null };
+Shopify.cdnHost = "cdn.shopify.com";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";
+
+!(function (o) {
+    (o.Shopify = o.Shopify || {}).modules = !0;
+})(window);
+
+!(function (o) {
+    function n() {
+        var o = [];
+        function n() {
+            o.push(Array.prototype.slice.apply(arguments));
+        }
+        return (n.q = o), n;
+    }
+    var t = (o.Shopify = o.Shopify || {});
+    (t.loadFeatures = n()), (t.autoloadFeatures = n());
+})(window);
+
+
+window.ShopifyPay = window.ShopifyPay || {};
+window.ShopifyPay.apiHost = "shop.app\/pay";
+
+var __st = {
+    a: 26426578,
+    offset: -14400,
+    reqid: "f3b28b8a-cd13-47f7-ba19-52b164e387b9",
+    pageurl: "pangrampangram.com\/",
+    u: "79565098fb90",
+    p: "home",
+};
+
+window.performance &&
+    window.performance.mark &&
+    window.performance.mark("shopify.content_for_header.end");
+
 (function () {
     function asyncLoad() {
         var urls = [
