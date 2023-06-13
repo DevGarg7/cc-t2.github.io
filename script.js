@@ -2433,4 +2433,231 @@ window.ShopifyAnalytics.merchantGoogleAnalytics = function () {
         },
     };
 
+    if (!window.AppstleIncluded) {
+        window.AppstleIncluded = true;
+        window.RS = Window.RS || {};
+        RS.Config = {
+            selectors: {
+                payment_button_selectors:
+                    "form[action$='/cart/add'] .shopify-payment-button",
+                subscriptionLinkSelector: "",
+                atcButtonPlacement: "BEFORE",
+                subscriptionLinkPlacement: "BEFORE",
+                cartRowSelector: "",
+                cartLineItemSelector: "",
+                cartLineItemPerQuantityPriceSelector: "",
+                cartLineItemTotalPriceSelector: "",
+                cartLineItemSellingPlanNameSelector: "",
+                cartSubTotalSelector: "",
+                cartLineItemPriceSelector: "",
+            },
+            enableCartWidgetFeature: "false",
+            useUrlWithCustomerId: "true",
+            atcButtonSelector: "",
+            moneyFormat: "${{amount}}",
+            oneTimePurchaseText:
+                '<span class="pack-option">One-Time Payment<\/span><br>$29 \u2013 <span class="writer">No Updates<\/span>',
+            shop: "pangrampangram.myshopify.com",
+            deliveryText: "delivery",
+            purchaseOptionsText: "",
+            manageSubscriptionButtonText: "Manage Subscription",
+            subscriptionOptionText:
+                '<span class="pack-option">VIPP\u00AE FSP Membership<\/span><br>$29 \/ Year \u2013 <span class="writer">Cancel Anytime<\/span>',
+            sellingPlanSelectTitle: "",
+            subscriptionPriceDisplayText: "",
+            tooltipTitle: "Subscription detail",
+            showTooltipOnClick: "false",
+            tooltipDesctiption:
+                "<strong>Have complete control of your subscriptions<\/strong><br\/><br\/>Skip, reschedule, edit, or cancel deliveries anytime, based on your needs.",
+            tooltipDescriptionOnPrepaidPlan:
+                "<b>Prepaid Plan Details<\/b><\/br> Total price: {{totalPrice}} ( Price for every delivery: {{pricePerDelivery}})",
+            tooltipDescriptionOnMultipleDiscount:
+                "<b>Discount Details<\/b><\/br> Initial discount is {{discountOne}} and then {{discountTwo}}",
+            tooltipDescriptionCustomization:
+                "{{{defaultTooltipDescription}}} <\/br>  {{{prepaidDetails}}} <\/br> {{{discountDetails}}}",
+            orderStatusManageSubscriptionTitle: "Subscription",
+            orderStatusManageSubscriptionDescription:
+                "Continue to your account to view and manage your subscriptions. Please use the same email address that you used to buy the subscription.",
+            orderStatusManageSubscriptionButtonText: "Manage your subscription",
+            subscriptionOptionSelectedByDefault: true,
+            totalPricePerDeliveryText: "{{prepaidPerDeliveryPrice}}\/delivery",
+            memberOnlySellingPlansJson: {},
+            nonMemberOnlySellingPlansJson: {},
+            sellingPlansJson: [
+                {
+                    frequencyCount: 1,
+                    frequencyInterval: "YEAR",
+                    billingFrequencyCount: 1,
+                    billingFrequencyInterval: "YEAR",
+                    frequencyName: "Charged Yearly — Cancel Anytime",
+                    afterCycle1: 0,
+                    afterCycle2: 0,
+                    discountEnabled: false,
+                    discountEnabled2: false,
+                    discountEnabledMasked: false,
+                    discountEnabled2Masked: false,
+                    id: "gid://shopify/SellingPlan/7748813103",
+                    frequencyType: "ON_PURCHASE_DAY",
+                    specificDayEnabled: false,
+                    cutOff: 0,
+                    prepaidFlag: "false",
+                    idNew: "gid://shopify/SellingPlan/7748813103",
+                    planType: "PAY_AS_YOU_GO",
+                    deliveryPolicyPreAnchorBehavior: "ASAP",
+                    freeTrialEnabled: false,
+                    memberOnly: false,
+                    nonMemberOnly: false,
+                    formFieldJson: "null",
+                    appstleCycles: [],
+                },
+            ],
+            widgetEnabled: true,
+            showTooltip: false,
+            sortByDefaultSequence: false,
+            showSubOptionBeforeOneTime: true,
+            showStaticTooltip: false,
+            showAppstleLink: false,
+            sellingPlanTitleText: "",
+            oneTimePriceText: "",
+            selectedPayAsYouGoSellingPlanPriceText: "",
+            selectedPrepaidSellingPlanPriceText: " {{totalPrice}}",
+            selectedDiscountFormat: "SAVE {{selectedDiscountPercentage}}",
+            manageSubscriptionBtnFormat:
+                "<a href='apps\/subscriptions' class='appstle_manageSubBtn' ><button class='btn' style='padding: 2px 20px'>Manage Subscription<\/button><a><br><br>",
+            manageSubscriptionUrl: "apps\/subscriptions",
+            appstlePlanId: 163,
+            showCheckoutSubscriptionBtn: true,
+            priceSelector: "",
+            landingPagePriceSelector: "",
+            quickViewClickSelector: "",
+            badgeTop: "",
+            pricePlacement: "BEFORE",
+            disableLoadingJquery: false,
+            widgetEnabledOnSoldVariant: "false",
+            switchRadioButtonWidget: false,
+            appstlePlanName: "BUSINESS",
+            appstlePlanFeatures: {
+                subscriptionOrderAmount: 30000.0,
+                analytics: true,
+                enableSubscriptionManagement: true,
+                enableDunningManagement: true,
+                enableCustomerPortalSettings: true,
+                enableShippingProfiles: true,
+                enableProductSwapAutomation: true,
+                enableAdvancedSellingPlans: true,
+                enableSummaryReports: true,
+                enableCustomEmailDomain: true,
+                enableWidgetPlacement: true,
+                enableIntegrations: true,
+                enableSmsAlert: false,
+                enableCustomEmailHtml: true,
+                enableCancellationManagement: true,
+                enableBundling: true,
+                enableAutomation: true,
+                enableQuickActions: false,
+                enableExternalApi: false,
+                enableCartWidget: true,
+                enableAutoSync: true,
+                webhookAccess: false,
+                accessWidgetDesignOptions: true,
+                accessSubscriptionActivityLogs: true,
+                accessBuildABox: true,
+                accessResendEmail: true,
+                accessKlaviyoContactSync: true,
+                accessOneTimeProductUpsells: true,
+                accessAdvanceSubscriptionPlanOptions: true,
+                accessSplitContract: true,
+                accessDiscountOnCancellationAttempt: true,
+                accessQuickCheckout: false,
+                accessSubscriberLoyaltyFeatures: true,
+                accessBundling: true,
+                accessManualSubscriptionCreation: true,
+                accessAppstleMenu: false,
+            },
+            formMappingAttributeName: "",
+            formMappingAttributeSelector: "",
+            quickViewModalPollingSelector: "",
+            scriptLoadDelay: "0",
+            formatMoneyOverride: "false",
+            appstle_app_proxy_path_prefix: "apps\/subscriptions",
+            updatePriceOnQuantityChange: "",
+            widgetParentSelector: "",
+            quantitySelector: "",
+            enableAddJSInterceptor: "false",
+            reBuyEnabled: "false",
+            loyaltyDetailsLabelText: "",
+            loyaltyPerkDescriptionText: "",
+            widgetTemplateHtml: `{% raw %}{% endraw %}`,
+
+            bundle: {},
+
+            labels:
+                '{"appstle.subscription.wg.yearsFrequencyTextV2":"Years","appstle.subscription.wg.weekFrequencyTextV2":"Week","appstle.subscription.wg.oneTimePurchaseTextV2":"One Time Purchase","appstle.subscription.wg.loyaltyPerkDescriptionTextV2":"{{#isDiscountTypeFreeProduct}}<div style=\'display: flex;\'><div style=\'height: 60px; width: 60px; flex-shrink: 0; margin-right: 10px;\'><img style=\'width: 100%\' src={{{featured_image}}}><\/img><\/div><div>After {{{billingCycleBlock}}} orders,<span style=\'color: #ffc000;font-weight: 700;\';> get a FREE {{freeProductName}} <\/span><\/div><div>{{\/isDiscountTypeFreeProduct}}{{#isDiscountTypePercentage}}After <span class=\'appstle-loyalty-billing-cycle\'><span class=\'appstle-loyalty-billing-cycle-count\'>{{{billingCycleBlock}}}<\/span> order<\/span>, <span class=\'appstle-loyalty-discount\'>get <span style=\'color: #ffc000;font-weight: 700;\';>{{{discount}}}% OFF your entire order<\/span><\/span>.{{\/isDiscountTypePercentage}}{{#isDiscountTypeShipping}}After <span class=\'appstle-loyalty-billing-cycle\'><span class=\'appstle-loyalty-billing-cycle-count\'>{{{billingCycleBlock}}}<\/span> order<\/span>, <span class=\'appstle-loyalty-discount\'>get <span style=\'color: #ffc000;font-weight: 700;\';>shipping at {{{formatDiscountedPrice}}}<\/span><\/span>.{{\/isDiscountTypeShipping}}{{#isDiscountTypeFixed}}After <span class=\'appstle-loyalty-billing-cycle\'><span class=\'appstle-loyalty-billing-cycle-count\'>{{{billingCycleBlock}}}<\/span> order<\/span>, <span class=\'appstle-loyalty-discount\'>get <span style=\'color: #ffc000;font-weight: 700;\';>{{{formatDiscountedPrice}}} OFF your entire order<\/span><\/span>.{{\/isDiscountTypeFixed}}","appstle.subscription.wg.unsubscribeFrequencyTextV2":"unsubscribe","appstle.subscription.wg.weeksFrequencyTextV2":"Weeks","appstle.subscription.wg.oneTimeFrequencyTextV2":"No updates","appstle.subscription.wg.dayFrequencyTextV2":"day","appstle.subscription.wg.allowFulfilmentCountViaPropertiesV2":"false","appstle.subscription.wg.monthsFrequencyTextV2":"Months","appstle.subscription.wg.deliveryEveryFrequencyTextV2":"Delivery Every","appstle.subscription.wg.subscribeAndSaveInitalV2":"Subscribe & save","appstle.subscription.wg.offFrequencyTextV2":"Off","appstle.subscription.wg.yearFrequencyTextV2":"Year","appstle.subscription.wg.daysFrequencyTextV2":"Days","appstle.subscription.wg.subscribeAndSaveSuccessV2":"Subscribe success","appstle.subscription.wg.monthFrequencyTextV2":"Month","appstle.subscription.wg.selectDeliverOptionV2":"select deliver option"}',
+
+            css: {
+                appstle_subscription_widget: {
+                    "margin-top": "",
+                    "margin-bottom": "",
+                },
+
+                appstle_subscription_wrapper: {
+                    "border-width": "0px",
+                    "border-color": "",
+                },
+
+                appstle_circle: {
+                    "border-color": "#ff7a00",
+                },
+
+                appstle_dot: {
+                    "background-color": "#ff7a00",
+                },
+
+                appstle_select: {
+                    "padding-top": "",
+                    "padding-bottom": "",
+                    "padding-left": "",
+                    "padding-right": "",
+                    "border-width": "",
+                    "border-style": "",
+                    "border-color": "",
+                    "border-radius": "",
+                },
+
+                tooltip_subscription_svg: {
+                    fill: "",
+                },
+
+                appstle_tooltip: {
+                    color: "",
+                    "background-color": "",
+                },
+
+                appstle_tooltip_border_top_color: {
+                    "border-top-color": "",
+                },
+
+                appstle_subscription_final_price: {
+                    color: "",
+                },
+                appstle_widget_text_color: {
+                    color: "",
+                },
+                appstle_selected_background: {
+                    background: "transparent",
+                },
+                elementCSS: "",
+                customCSS: "",
+                customerPortalCss:
+                    'body, .app-main { \nfont-family:"PP Neue Montreal" !important;\n}\n\n.as-bg-gray-100{\nbackground-color:#1c1c1c !important;\n}\n\n.as-text-gray-900 {\ncolor:#ffffff !important;\n}\n\n.as-edit-frequency_data,\n.as-subtotal-price .as-text-gray-900,\n.as-subscription-header .as-text-gray-900{\ncolor:#000000 !important;\n}\n\n.as-customer-info,\n.as-delivery-price,\n.container .appstle_contract_see_more,\n.as-button--pause {\ndisplay:none !important;\n}\n\n.as-button--cancelsub {\nborder:2px rgb(220 38 38\/var(--tw-bg-opacity)) solid;\n}\n\n.as-py-10 {\npadding-top: 100px !important;\npadding-bottom: 200px !important;\n}\n\n.as-bg-indigo-600 {\nbackground-color:#1c1c1c !important;\n}\n#root > div > div > div > div > div > div.as-w-full.as-px-2.as-my-8.sm\\:as-px-0.as-subscription-detail-wrapper > div.as-flex.as-space-x-0\\.5.as-rounded-lg.as-overflow-hidden.as-shadow.as-tab-list{\ndisplay: none!important;\n}\n\n#headlessui-tabs-panel-10 > div > div.lg\\:as-col-span-8.as-full-width.as-panel-left > div > div > div.as-flex.as-justify-between.as-items-center.as-mb-1.as-product-details_header {\ndisplay: none!important;\n}\n\n#headlessui-tabs-panel-10 > div > div.lg\\:as-col-span-8.as-full-width.as-panel-left > div > div > div.as-relative.as-overflow-x-auto.as-product-details-table-wrapper > table > tbody > tr.as-bg-white.as-border-b.hover\\:as-bg-gray-50.as-product-line > th > div > div.as-col-span-10.as-product-line-details > p.as-mt-4.as-product-action > span.as-cursor-pointer.as-font-medium.as-text-indigo-600.hover\\:as-underline.as-cta.as-edit-product-cta{\ndisplay: none!important;\n}\n#headlessui-tabs-panel-10 > div > div.lg\\:as-col-span-8.as-full-width.as-panel-left > div > div > div.as-relative.as-overflow-x-auto.as-product-details-table-wrapper > table > tbody > tr.as-bg-white.as-border-b.hover\\:as-bg-gray-50.as-product-line > th > div > div.as-col-span-10.as-product-line-details > p.as-mt-4.as-product-action > span.as-cursor-pointer.as-font-medium.as-text-yellow-600.hover\\:as-underline.as-ml-2.as-cta.as-view-more-cta{\ndisplay: none!important;\n}\n#headlessui-tabs-panel-10 > div > div.lg\\:as-col-span-4.as-grid.as-gap-4.as-full-width.as-panel-right > div.as-bg-white.as-shadow.as-overflow-hidden.sm\\:as-rounded-lg.as-p-4.as-card.as-edit-billing{\ndisplay: none!important;\n}\n#headlessui-tabs-panel-10 > div > div.lg\\:as-col-span-4.as-grid.as-gap-4.as-full-width.as-panel-right > div.as-bg-white.as-shadow.as-overflow-hidden.sm\\:as-rounded-lg.as-p-4.as-card.as-additional-order-details{\ndisplay: none!important;\n}\n#headlessui-tabs-panel-10 > div > div.lg\\:as-col-span-4.as-grid.as-gap-4.as-full-width.as-panel-right > div.as-bg-white.as-shadow.as-overflow-hidden.sm\\:as-rounded-lg.as-p-4.as-card.as-edit-discount{\ndisplay: none!important;\n}\n#headlessui-tabs-panel-10 > div > div.lg\\:as-col-span-4.as-grid.as-gap-4.as-full-width.as-panel-right > div.as-bg-white.as-shadow.as-overflow-hidden.sm\\:as-rounded-lg.as-p-4.as-card.as-edit-shipping{\ndisplay: none!important;\n}\nfooter{\nz-index: -1;\n}\n#root .as-cp-wrapper{\nbackground-color: transparent !important;\n} \n\n.lg\\:as-block {\ndisplay:none !important;\n}',
+            },
+        };
+
+        var _RSConfig = _RSConfig || {};
+
+        _RSConfig.shop = "pangrampangram.myshopify.com";
+
+        _RSConfig.shopMoneyFormat = "${{amount}}";
+        _RSConfig.shopMoneyFormatWithCurrencyFormat = "${{amount}} USD";
+    }
     var AUTOHIDE = Boolean(0);
